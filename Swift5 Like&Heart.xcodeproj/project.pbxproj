@@ -12,13 +12,15 @@
 		B8213B0D245020E82270E5E9 /* Pods_Swift5_Like_HeartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F719FD48A1DF9F4248ABC3F /* Pods_Swift5_Like_HeartTests.framework */; };
 		E71BB879249DE7C100680852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB878249DE7C100680852 /* AppDelegate.swift */; };
 		E71BB87B249DE7C100680852 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB87A249DE7C100680852 /* SceneDelegate.swift */; };
-		E71BB87D249DE7C100680852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB87C249DE7C100680852 /* ViewController.swift */; };
 		E71BB880249DE7C100680852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71BB87E249DE7C100680852 /* Main.storyboard */; };
 		E71BB882249DE7C300680852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71BB881249DE7C300680852 /* Assets.xcassets */; };
 		E71BB885249DE7C300680852 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71BB883249DE7C300680852 /* LaunchScreen.storyboard */; };
 		E71BB890249DE7C400680852 /* Swift5_Like_HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB88F249DE7C400680852 /* Swift5_Like_HeartTests.swift */; };
 		E71BB89B249DE7C400680852 /* Swift5_Like_HeartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB89A249DE7C400680852 /* Swift5_Like_HeartUITests.swift */; };
 		E7A0EB5A24A243E2009CCEAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7A0EB5924A243E2009CCEAE /* GoogleService-Info.plist */; };
+		E7A0EB5D24A2458B009CCEAE /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = E7A0EB5B24A24589009CCEAE /* heart.json */; };
+		E7A0EB5E24A2458B009CCEAE /* good.json in Resources */ = {isa = PBXBuildFile; fileRef = E7A0EB5C24A2458B009CCEAE /* good.json */; };
+		E7A0EB6024A24666009CCEAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0EB5F24A24666009CCEAE /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 		E71BB875249DE7C100680852 /* Swift5 Like&Heart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift5 Like&Heart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71BB878249DE7C100680852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E71BB87A249DE7C100680852 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E71BB87C249DE7C100680852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E71BB87F249DE7C100680852 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E71BB881249DE7C300680852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E71BB884249DE7C300680852 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +62,9 @@
 		E71BB89A249DE7C400680852 /* Swift5_Like_HeartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift5_Like_HeartUITests.swift; sourceTree = "<group>"; };
 		E71BB89C249DE7C400680852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A0EB5924A243E2009CCEAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7A0EB5B24A24589009CCEAE /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
+		E7A0EB5C24A2458B009CCEAE /* good.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = good.json; sourceTree = "<group>"; };
+		E7A0EB5F24A24666009CCEAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDD02E66B15638FD808BBB53 /* Pods-Swift5 Like&HeartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5 Like&HeartTests.debug.xcconfig"; path = "Target Support Files/Pods-Swift5 Like&HeartTests/Pods-Swift5 Like&HeartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F13A1CADA35F8CEF10D26AFF /* Pods_Swift5_Like_Heart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5_Like_Heart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,6 +150,8 @@
 				E7A0EB5624A24372009CCEAE /* Controller */,
 				E71BB886249DE7C300680852 /* Info.plist */,
 				E7A0EB5924A243E2009CCEAE /* GoogleService-Info.plist */,
+				E7A0EB5C24A2458B009CCEAE /* good.json */,
+				E7A0EB5B24A24589009CCEAE /* heart.json */,
 			);
 			path = "Swift5 Like&Heart";
 			sourceTree = "<group>";
@@ -173,7 +179,7 @@
 			children = (
 				E71BB878249DE7C100680852 /* AppDelegate.swift */,
 				E71BB87A249DE7C100680852 /* SceneDelegate.swift */,
-				E71BB87C249DE7C100680852 /* ViewController.swift */,
+				E7A0EB5F24A24666009CCEAE /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,9 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A0EB5E24A2458B009CCEAE /* good.json in Resources */,
 				E71BB885249DE7C300680852 /* LaunchScreen.storyboard in Resources */,
 				E71BB882249DE7C300680852 /* Assets.xcassets in Resources */,
 				E7A0EB5A24A243E2009CCEAE /* GoogleService-Info.plist in Resources */,
+				E7A0EB5D24A2458B009CCEAE /* heart.json in Resources */,
 				E71BB880249DE7C100680852 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E71BB87D249DE7C100680852 /* ViewController.swift in Sources */,
+				E7A0EB6024A24666009CCEAE /* LoginViewController.swift in Sources */,
 				E71BB879249DE7C100680852 /* AppDelegate.swift in Sources */,
 				E71BB87B249DE7C100680852 /* SceneDelegate.swift in Sources */,
 			);
