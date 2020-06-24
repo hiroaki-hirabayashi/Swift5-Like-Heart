@@ -7,13 +7,37 @@
 //
 
 import UIKit
+import Photos
+import Firebase
+import PKHUD
 
-class EditViewController: UIViewController {
+//アイコン設定画面
+class EditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    @IBOutlet weak var imageView: UIImageView!
+    var imageURL: URL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch(status) {
+            case .authorized:
+                print("許可されています")
+            case .denied:
+                print("拒否されました")
+            case.notDetermined:
+                print("notDetermined")
+            case .restricted:
+                print("restricted")
+            default:
+                fatalError()
+            }
+        }
+    }
+    
+    func openActionSheet() {
+        let alert: UIAlertController = UIAlertController(title: "選択してください", message: "", preferredStyle: .actionSheet)
     }
     
 
