@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var userNameView: UIView!
+    @IBOutlet weak var textField: UITextField!
+    
     //一回だけ呼ばれる
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //常時表示状態
+        userNameView.isHidden = false
 
     }
     
@@ -21,7 +28,28 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-
+    @IBAction func done(_ sender: Any) {
+        //textFieldの値をアプリ内に保存
+        //textFieldのtextが空でない場合　isEnpty(空だったら)
+        //入力されていたら
+        if textField.text?.isEmpty != true {
+            userNameView.isHidden = true
+            UserDefaults.standard.set(textField.text, forKey: "userName")
+        } else {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
+            print("振動")
+        }
+        
+    }
+    
+    @IBAction func login(_ sender: Any) {
+        //匿名ログイン
+        Auth.auth().signInAnonymously { (result, error) in
+            <#code#>
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
