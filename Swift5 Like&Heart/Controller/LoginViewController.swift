@@ -10,10 +10,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //一回だけ呼ばれる
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    //毎回呼ばれる
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
 
