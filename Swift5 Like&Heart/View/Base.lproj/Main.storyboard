@@ -77,11 +77,28 @@
                     <connections>
                         <outlet property="textField" destination="VYi-PK-9nH" id="4Ip-E8-aLE"/>
                         <outlet property="userNameView" destination="4uB-J1-OQV" id="wf1-jv-hfW"/>
+                        <segue destination="sfA-qm-Vla" kind="show" id="UjS-6N-LNa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1082.608695652174" y="121.875"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="mx5-sG-2ge">
+            <objects>
+                <viewController id="sfA-qm-Vla" customClass="EditViewController" customModule="Swift5_Like_Heart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y5f-2V-i8a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="x3j-Nt-4jE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="96a-Wa-C3t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gtf-zv-jn8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NqK-4R-6xH">
@@ -91,7 +108,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ffL-Ty-YSe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

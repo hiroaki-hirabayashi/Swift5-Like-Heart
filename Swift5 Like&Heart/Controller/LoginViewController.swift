@@ -46,7 +46,12 @@ class LoginViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         //匿名ログイン
         Auth.auth().signInAnonymously { (result, error) in
-            <#code#>
+            //errorが無かったら
+            if error == nil {
+                self.performSegue(withIdentifier: "edit", sender: nil)
+            } else {
+                print(error?.localizedDescription as Any)
+            }
         }
         
     }

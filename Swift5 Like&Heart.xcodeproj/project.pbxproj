@@ -21,6 +21,7 @@
 		E7A0EB5D24A2458B009CCEAE /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = E7A0EB5B24A24589009CCEAE /* heart.json */; };
 		E7A0EB5E24A2458B009CCEAE /* good.json in Resources */ = {isa = PBXBuildFile; fileRef = E7A0EB5C24A2458B009CCEAE /* good.json */; };
 		E7A0EB6024A24666009CCEAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0EB5F24A24666009CCEAE /* LoginViewController.swift */; };
+		E7D3450724A3C776004C16D2 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3450624A3C776004C16D2 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E7A0EB5B24A24589009CCEAE /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
 		E7A0EB5C24A2458B009CCEAE /* good.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = good.json; sourceTree = "<group>"; };
 		E7A0EB5F24A24666009CCEAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E7D3450624A3C776004C16D2 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		EDD02E66B15638FD808BBB53 /* Pods-Swift5 Like&HeartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5 Like&HeartTests.debug.xcconfig"; path = "Target Support Files/Pods-Swift5 Like&HeartTests/Pods-Swift5 Like&HeartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F13A1CADA35F8CEF10D26AFF /* Pods_Swift5_Like_Heart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5_Like_Heart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -180,6 +182,7 @@
 				E71BB878249DE7C100680852 /* AppDelegate.swift */,
 				E71BB87A249DE7C100680852 /* SceneDelegate.swift */,
 				E7A0EB5F24A24666009CCEAE /* LoginViewController.swift */,
+				E7D3450624A3C776004C16D2 /* EditViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D3450724A3C776004C16D2 /* EditViewController.swift in Sources */,
 				E7A0EB6024A24666009CCEAE /* LoginViewController.swift in Sources */,
 				E71BB879249DE7C100680852 /* AppDelegate.swift in Sources */,
 				E71BB87B249DE7C100680852 /* SceneDelegate.swift in Sources */,
