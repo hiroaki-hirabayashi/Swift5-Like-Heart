@@ -92,9 +92,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-nd-oxQ">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-nd-oxQ">
                                 <rect key="frame" x="57" y="123" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zXF-tg-CkH" appends="YES" id="ztl-Zk-F1f"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwo-zN-7FU">
                                 <rect key="frame" x="57" y="506" width="300" height="64"/>
@@ -115,11 +119,33 @@
                     <navigationItem key="navigationItem" id="96a-Wa-C3t"/>
                     <connections>
                         <outlet property="imageView" destination="fIo-nd-oxQ" id="ior-TN-OaT"/>
+                        <segue destination="uVo-LD-aQC" kind="show" identifier="timeLine" id="Fje-8w-Uzc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gtf-zv-jn8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zXF-tg-CkH">
+                    <connections>
+                        <action selector="tapImageView:" destination="sfA-qm-Vla" id="J4g-uL-pjr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1847.826086956522" y="121.875"/>
+        </scene>
+        <!--Time Line View Controller-->
+        <scene sceneID="Wd7-7o-tUJ">
+            <objects>
+                <viewController id="uVo-LD-aQC" customClass="TimeLineViewController" customModule="Swift5_Like_Heart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="En7-ZZ-YDi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="lM9-J8-UhX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WGM-3Q-luR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjm-Yl-zp9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2603" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NqK-4R-6xH">
