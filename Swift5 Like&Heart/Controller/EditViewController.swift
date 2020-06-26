@@ -91,10 +91,17 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     
     @IBAction func done(_ sender: Any) {
+        //
+        if imageView.image != nil {
+            //同期処理
+            DispatchQueue.main.async {
+                self.sendAndGetImageURL()
+            }
+            performSegue(withIdentifier: "timeLine", sender: nil)
+
+        }
         
         
-        
-        performSegue(withIdentifier: "timeLine", sender: nil)
     }
     
     func sendAndGetImageURL() {
@@ -114,7 +121,11 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //self.imageView.imageがnilじゃなかったら
         if self.imageView.image != nil {
             imageData = (self.imageView.image?.jpegData(compressionQuality: 0.03)) as! Data
-
+            
+        //HUD
+            HUD.dimsBackground = false
+            HUD.show(.progress)
+        
         //アップロード
             let uploadTask = imageRef.putData(imageData, metadata: nil) { (metadata, error) in
                 if error != nil {
@@ -124,13 +135,13 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 imageRef.downloadURL { (url, error) in
                     if url != nil {
                         //HUD
+                        HUD.hide()
                         self.imageURL = url
                         UserDefaults.standard.set(self.imageURL?.absoluteString, forKey: "ProfileImageString")
                     }
                 }
             }
             uploadTask.resume()
-
         }
         
         //キャンセル
