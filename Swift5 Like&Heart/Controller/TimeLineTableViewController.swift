@@ -7,12 +7,30 @@
 //
 
 import UIKit
+import Firebase
 
 class TimeLineTableViewController: UITableViewController {
 
+    var timeLineRef = Database.database().reference().child("timeLine")
+    var timeLines = [TimeLineModel]()
+    var text = ""
+    var userName = ""
+    var imageString = ""
+    var likeCounts = Int()
+    var heartCounts = Int()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //ナビバーを表示させたまま
+        self.navigationController?.navigationBar.isHidden = false
+        //戻るボタンを消す
+        self.navigationItem.hidesBackButton = true
+        //タップ可能にする
+        self.tableView.allowsSelection = true
+        title = "Like&Heart"
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
