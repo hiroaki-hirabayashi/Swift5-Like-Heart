@@ -140,10 +140,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="713" id="gUx-vb-W4e">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="713" id="gUx-vb-W4e" customClass="TimeLineCell" customModule="Swift5_Like_Heart" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="713"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gUx-vb-W4e" id="6j7-BX-xha">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gUx-vb-W4e" id="6j7-BX-xha" customClass="TimeLineCell" customModule="Swift5_Like_Heart" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="713"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -187,6 +187,14 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentLabel" destination="MDX-1m-rqF" id="wjl-gt-mJo"/>
+                                    <outlet property="contentsImageView" destination="SUe-hg-nJc" id="S9x-1S-RKv"/>
+                                    <outlet property="heartButton" destination="eUU-ER-m7E" id="KQ4-OS-qKb"/>
+                                    <outlet property="likeButton" destination="JnE-Q5-Y9i" id="ftB-8U-2bk"/>
+                                    <outlet property="profileImageView" destination="1h9-vH-Rch" id="SJQ-y0-Dnb"/>
+                                    <outlet property="userNameLabel" destination="mjN-gJ-s8w" id="Fex-DN-nxd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
