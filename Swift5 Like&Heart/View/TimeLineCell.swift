@@ -15,15 +15,10 @@ import Lottie
 class TimeLineCell: UITableViewCell {
 
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var userNameLabel: UILabel!
-    
     @IBOutlet weak var contentsImageView: UIImageView!
-    
     @IBOutlet weak var likeButton: UIButton!
-    
     @IBOutlet weak var heartButton: UIButton!
-    
     @IBOutlet weak var commentLabel: UILabel!
     
     let normalLikeColor = UIColor.lightGray
@@ -37,11 +32,35 @@ class TimeLineCell: UITableViewCell {
 
     var animationView: AnimationView! = AnimationView()
     
-    var timeLineModel: TimeLineModel {
+    var timeLineModel: TimeLineModel! {
         didSet {
             commentLabel.text = timeLineModel.text
             commentLabel.sizeToFit()
             contentsImageView.sd_setImage(with: URL(string: timeLineModel.imageString), placeholderImage: UIImage(named: "noImage"), options: .continueInBackground, completed: nil)
+            
+            userNameLabel.text = timeLineModel.userName
+            
+            likeButton.setTitle("👍\(timeLineModel.likeCounts)いいね", for: [])
+             heartButton.setTitle("💗\(timeLineModel.heartCounts)ハート", for: [])
+        }
+        
+        
+    }
+    
+    func startLikeAnimation() {
+        //jsonファイルを読み込んで作動させる
+        let animation = Animation.named("good")
+        animationView.animation = animation
+        animationView.contentMode = .scaleAspectFit
+        animationView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+        animationView.loopMode = .playOnce
+        animationView.backgroundColor = .clear
+        self.addSubview(animationView)
+        
+        animationView.play()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            //2秒後に行いたい処理
+            self.animationView.removeFromSuperview()
         }
     }
     
