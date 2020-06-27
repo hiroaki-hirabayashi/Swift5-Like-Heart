@@ -15,6 +15,7 @@ class TimeLineTableViewController: UITableViewController {
     var timeLines = [TimeLineModel]()
     var text = ""
     var userName = ""
+    var profileImageString = ""
     var imageString = ""
     var likeCounts = Int()
     var heartCounts = Int()
@@ -37,6 +38,23 @@ class TimeLineTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //コンテンツを受信する
+        timeLineRef.observe(.value) { (snapshot) in
+            //全て除去
+            self.timeLines.removeAll()
+            for child in snapshot.children {
+                let childSnapshot = child as! DataSnapshot
+                let timeline = TimeLineModel(snapshot: childSnapshot)
+                print(timeline)
+                self.timeLines.insert(timeline, at: 0)
+            }
+            self.tableView.reloadData()
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -55,10 +73,29 @@ class TimeLineTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TimeLineCell
-
+        let timeLineModel = timeLines[indexPath.row]
+        cell.timeLineModel = timeLineModel
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        profileImageString = timeLines[indexPath.row].profileImageString
+        userName = timeLines[indexPath.row].userName
+        imageString = timeLines[indexPath.row].imageString
+        likeCounts = timeLines[indexPath.row].likeCounts
+        heartCounts = timeLines[indexPath.row].heartCounts
+        text = timeLines[indexPath.row].text
+        
+        performSegue(withIdentifier: "detailViewController", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailViewController" {
+            
+        }
     }
     
 

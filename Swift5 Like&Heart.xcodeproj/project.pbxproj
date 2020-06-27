@@ -18,6 +18,7 @@
 		E71BB890249DE7C400680852 /* Swift5_Like_HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB88F249DE7C400680852 /* Swift5_Like_HeartTests.swift */; };
 		E71BB89B249DE7C400680852 /* Swift5_Like_HeartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB89A249DE7C400680852 /* Swift5_Like_HeartUITests.swift */; };
 		E740F53D24A597BE0066642A /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740F53C24A597BE0066642A /* TimeLineTableViewController.swift */; };
+		E77E0EEB24A7CED400B100A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77E0EEA24A7CED400B100A4 /* DetailViewController.swift */; };
 		E78F27E324A651D800D1360F /* TimeLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F27E224A651D800D1360F /* TimeLineModel.swift */; };
 		E78F27E524A65CBE00D1360F /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F27E424A65CBE00D1360F /* TimeLineCell.swift */; };
 		E7A0EB5A24A243E2009CCEAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7A0EB5924A243E2009CCEAE /* GoogleService-Info.plist */; };
@@ -66,6 +67,7 @@
 		E71BB89A249DE7C400680852 /* Swift5_Like_HeartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift5_Like_HeartUITests.swift; sourceTree = "<group>"; };
 		E71BB89C249DE7C400680852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E740F53C24A597BE0066642A /* TimeLineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewController.swift; sourceTree = "<group>"; };
+		E77E0EEA24A7CED400B100A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E78F27E224A651D800D1360F /* TimeLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineModel.swift; sourceTree = "<group>"; };
 		E78F27E424A65CBE00D1360F /* TimeLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
 		E7A0EB5924A243E2009CCEAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				E7A0EB5F24A24666009CCEAE /* LoginViewController.swift */,
 				E7D3450624A3C776004C16D2 /* EditViewController.swift */,
 				E740F53C24A597BE0066642A /* TimeLineTableViewController.swift */,
+				E77E0EEA24A7CED400B100A4 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				E78F27E324A651D800D1360F /* TimeLineModel.swift in Sources */,
 				E71BB87B249DE7C100680852 /* SceneDelegate.swift in Sources */,
 				E78F27E524A65CBE00D1360F /* TimeLineCell.swift in Sources */,
+				E77E0EEB24A7CED400B100A4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
