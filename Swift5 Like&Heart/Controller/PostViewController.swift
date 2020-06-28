@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import Firebase
+import PKHUD
 
-class PostViewController: UIViewController {
+class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var postBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var contentImageView: UIImageView!
+    @IBOutlet weak var commentTextView: UITextView!
+    
+    var imageURL: URL?
+    var profileImageString = ""
+    var userName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Like&Heart"
+        //最初は送信ボタンは使えないようにする
+        postBarButtonItem.isEnabled = false
+        commentTextView.text = ""
+        commentTextView.becomeFirstResponder()
 
-        // Do any additional setup after loading the view.
     }
     
 

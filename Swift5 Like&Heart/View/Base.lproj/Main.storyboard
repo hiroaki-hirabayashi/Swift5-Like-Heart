@@ -250,6 +250,11 @@
                     <navigationItem key="navigationItem" id="zec-gR-Uaf">
                         <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="O9t-9e-yYK"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="commentTextView" destination="gzt-uA-nt2" id="Lh1-5a-DlK"/>
+                        <outlet property="contentImageView" destination="xY4-Ij-B9d" id="kgl-KU-dGH"/>
+                        <outlet property="postBarButtonItem" destination="O9t-9e-yYK" id="VAs-qM-m8v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTD-gh-EBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
