@@ -208,7 +208,13 @@
                             <outlet property="delegate" destination="2fE-rA-Z1G" id="0LR-sJ-aUI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6vo-zW-uUb"/>
+                    <navigationItem key="navigationItem" id="6vo-zW-uUb">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="Vrb-6c-Ge6">
+                            <connections>
+                                <segue destination="IoN-ak-Ulq" kind="show" id="ePs-wO-gBA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="yY6-Co-60x" kind="show" identifier="detailViewController" id="zkI-ea-g5r"/>
                     </connections>
@@ -216,6 +222,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2u-BN-Mr1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2569.5652173913045" y="121.875"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="L6M-zk-2dj">
+            <objects>
+                <viewController id="IoN-ak-Ulq" customClass="PostViewController" customModule="Swift5_Like_Heart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cRj-gS-xEK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xY4-Ij-B9d">
+                                <rect key="frame" x="20" y="117" width="374" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gzt-uA-nt2">
+                                <rect key="frame" x="20" y="519" width="374" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="RXm-V9-gw2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zec-gR-Uaf">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="O9t-9e-yYK"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTD-gh-EBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3305.7971014492755" y="121.875"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="HdU-YP-voT">
@@ -304,5 +342,7 @@
     </scenes>
     <resources>
         <image name="backgroundImage" width="1280" height="1920"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
     </resources>
 </document>

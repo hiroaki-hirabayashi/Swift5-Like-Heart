@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
 
@@ -17,9 +18,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var commentTextView: UITextView!
     
+    //受け取り用変数
     var profileImage = String()
     var userName = String()
-    var contentImage = Int()
+    var contentImage = String()
     var likeCount = Int()
     var heartCount = Int()
     var comment = String()
@@ -27,8 +29,15 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileImageView.sd_setImage(with: URL(string: profileImage), placeholderImage: UIImage(named: "noImage"), options: .continueInBackground, completed: nil)
+        userNameLabel.text = userName
+        contentImageView.sd_setImage(with: URL(string: contentImage), placeholderImage: UIImage(named: "noImage"), options: .continueInBackground, completed: nil)
+        commentTextView.text = comment
+        likeButton.setTitle("👍\(likeCount)いいね", for: [])
+        heartButton.setTitle("💗\(heartCount)ハート", for: [])
+        
 
-        // Do any additional setup after loading the view.
     }
     
 

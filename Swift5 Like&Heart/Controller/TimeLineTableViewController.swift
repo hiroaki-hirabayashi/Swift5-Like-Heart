@@ -94,7 +94,13 @@ class TimeLineTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailViewController" {
-            
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.profileImage = profileImageString
+            detailViewController.userName = userName
+            detailViewController.contentImage = imageString
+            detailViewController.likeCount = likeCounts
+            detailViewController.heartCount = heartCounts
+            detailViewController.comment = text
         }
     }
     
