@@ -80,6 +80,10 @@ class TimeLineTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 718
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         profileImageString = timeLines[indexPath.row].profileImageString
         userName = timeLines[indexPath.row].userName

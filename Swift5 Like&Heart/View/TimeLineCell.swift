@@ -35,7 +35,7 @@ class TimeLineCell: UITableViewCell {
     var timeLineModel: TimeLineModel! {
         didSet {
             commentLabel.text = timeLineModel.text
-            commentLabel.sizeToFit()
+//            commentLabel.sizeToFit()
             contentsImageView.sd_setImage(with: URL(string: timeLineModel.imageString), placeholderImage: UIImage(named: "noImage"), options: .continueInBackground, completed: nil)
             
             userNameLabel.text = timeLineModel.userName
