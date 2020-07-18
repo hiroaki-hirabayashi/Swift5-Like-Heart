@@ -11,7 +11,6 @@ import Firebase
 import SDWebImage
 import Lottie
 
-
 class TimeLineCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -32,9 +31,6 @@ class TimeLineCell: UITableViewCell {
     let tapHeartColor = UIColor.red
     
     var animationView: AnimationView! = AnimationView()
-    
-    
-    
     
     var timeLineModel: TimeLineModel! {
         didSet {
@@ -281,6 +277,7 @@ func startLikeAnimation() {
                     
                 }
                 
+              
                 
                 
             }
@@ -293,3 +290,4 @@ func startLikeAnimation() {
     }
     
 }
+
