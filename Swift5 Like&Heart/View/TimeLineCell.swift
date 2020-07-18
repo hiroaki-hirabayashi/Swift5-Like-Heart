@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import SDWebImage
-import Lottie
+import Lotti
 
 class TimeLineCell: UITableViewCell {
     
@@ -55,19 +55,19 @@ class TimeLineCell: UITableViewCell {
                 likeButton.setTitleColor(normalLikeColor, for: [])
                 heartButton.setTitleColor(normalHeartColor, for: [])
                 
-            }else if (timeLineModel.likeCounts == 0 && timeLineModel.heartCounts == 0) && likeTapFlag == true && heartTapFlag == false{
+            }　else if (timeLineModel.likeCounts == 0 && timeLineModel.heartCounts == 0) && likeTapFlag == true && heartTapFlag == false{
                 
                 likeButton.setTitleColor(normalLikeColor, for: [])
                 
                 
-            }else if (timeLineModel.likeCounts == 0 && timeLineModel.heartCounts == 0) && likeTapFlag == false && heartTapFlag == true{
+            }　else if (timeLineModel.likeCounts == 0 && timeLineModel.heartCounts == 0) && likeTapFlag == false && heartTapFlag == true{
                 
                 heartButton.setTitleColor(normalHeartColor, for: [])
                 
                 
-            }else if likeTapFlag == true{
+            }　else if likeTapFlag == true{
                 likeButton.setTitleColor(tapLikeColor, for: [])
-            }else if heartTapFlag == true{
+            }　else if heartTapFlag == true{
                 heartButton.setTitleColor(tapHeartColor, for: [])
             }
             
@@ -94,6 +94,7 @@ func startLikeAnimation() {
     animationView.play()
     
     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+       
         //2秒後に行いたい処理
         self.animationView.removeFromSuperview()
     }
